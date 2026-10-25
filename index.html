@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrisha | Masa Depan Agribisnis Modern</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Agri<span>sha</span></a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#produk" class="nav-link">Produk</a></li>
+                <li><a href="#tentang" class="nav-link">Tentang</a></li>
+                <li><a href="#kontak" class="nav-link">Kontak</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+            <span class="badge">Smart Farmiing Technology</span>
+            <h1>Agrisha</h1>
+            <p>Merevolusi pertanian tradisional dengan teknologi pemantauan dan irigasi pintar berbasis sensor. Memastikan hasil panen premium dan masa depan pangan yang berkelanjutan.</p>
+            <div class="hero-cta">
+                <a href="#produk" class="btn btn-primary">Beli Bibit Sekarang <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <h3>15M+</h3>
+                    <p>Perangkat Terpasang</p>
+                </div>
+                <div class="stat-item">
+                    <h3>99.4%</h3>
+                    <p>Akurasi Data Sensor</p>
+                </div>
+                <div class="stat-item">
+                    <h3>45k+</h3>
+                    <p>Petani Modern Terlayani</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="produk" class="products-section section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Katalog Pruduk Kami</h2>
+                    <p>Sistem Irigasi Pintar dan Pemantauan Tanaman Presisi untuk Hasil Optimal.</p>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card reveal">
+                        <div class="product-img-wrapper">
+                            <div class="product-badge ready">Ready Stock</div>
+                            <img src="P1.jpg" alt="Bibit Cabai">
+                        </div>
+                        <div class="product-info">
+                            <h3>Penyiram Tanaman Otomatis</h3>
+                            <p class="price">Rp 175.000 <span>/ Paket </span></p>
+                            <p class="desc">Solusi pintar perawatan tanaman: otomatis, akurat, dan dilengkapi pemantau kelembapan tanah real-time.</p>
+                            <button class="btn btn-buy" onclick="openOrderModal('Penyiram Tanaman Otomatis')">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                    <div class="product-card reveal">
+                        <div class="product-img-wrapper">
+                            <div class="product-badge preorder">Ready Stock</div>
+                            <img src="IOT.jpg" alt="Bibit Gambas">
+                        </div>
+                        <div class="product-info">
+                            <h3>Sistem Penyiraman & Monitoring Tanaman OLED</h3>
+                            <p class="price">Rp 200.000 <span>/ Paket </span></p>
+                            <p class="desc">Solusi irigasi otomatis yang lebih canggih dengan layar monitoring OLED terintegrasi untuk pembacaan suhu dan kelembapan real-time.</p>
+                            <button class="btn btn-buy" onclick="openOrderModal('Sistem Penyiraman & Monitoring Tanaman OLED')">Pesan Sekarang</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="order-section section-padding">
+            <div class="container small-container">
+                <div class="form-wrapper reveal">
+                    <div class="section-header">
+                        <h2>Sistem Pemesanan Pintar</h2>
+                        <p>Isi formulir di bawah ini. Sistem AI kami akan langsung memproses pemesanan Anda.</p>
+                    </div>
+                    <form id="orderForm" onsubmit="handleOrder(event)">
+                        <div class="input-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" required placeholder="Masukkan nama Anda">
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Alamat Email</label>
+                            <input type="email" id="email" required placeholder="name@company.com">
+                        </div>
+                        <div class="input-grid">
+                            <div class="input-group">
+                                <label for="product">Pilih Produk</label>
+                                <select id="product" required>
+                                    <option value="" disabled selected>Pilih produk...</option>
+                                    <option value="Penyiram Tanaman Otomatis">Penyiram Tanaman Otomatis</option>
+                                    <option value="Sistem Penyiraman & Monitoring Tanaman OLED">Sistem Penyiraman & Monitoring Tanaman OLED</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="quantity">Jumlah (Perangkat)</label>
+                                <input type="number" id="quantity" min="1" value="1" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Lanjutkan ke Checkout <i class="fas fa-credit-card"></i></button>
+                    </form>
+                    <div id="successMessage" class="success-alert">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Pesanan Berhasil Diproses!</h3>
+                        <p>Invoice resmi telah dikirimkan ke email Anda. Anda sedang dialihkan ke WhatsApp untuk rincian tagihan...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="tentang" class="about-section section-padding">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <span class="badge">Our Vision & Mission</span>
+                        <h2>AGRISHA</h2>
+                        <p>Agrisha didirikan melalui pemikiran kritis dan kolaborasi erat dengan lembaga pemerintah, BPP TUMPANG (Balai Penyuluhan Pertanian Tumpang), serta dukungan penuh dari SMK TELKOM MALANG, yang bersama-sama membentuk landasan inovasi
+                            kami.
+                        </p>
+                        <div class="vision-mission">
+                            <div class="vm-item">
+                                <i class="fas fa-eye"></i>
+                                <div>
+                                    <h4>Visi Kami</h4>
+                                    <p>Menjadi pelopor solusi pertanian modern berkualitas untuk memajukan sektor pangan secara berkelanjutan di era digital.</p>
+                                </div>
+                            </div>
+                            <div class="vm-item">
+                                <i class="fas fa-rocket"></i>
+                                <div>
+                                    <h4>Misi Kami</h4>
+                                    <p>Memberikan akses ke sistem teknologi dan benih unggul berkualitas tinggi demi kesejahteraan dan keberlangsungan jangka panjang para petani.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual reveal">
+                        <div class="visual-box">
+                            <img src="https://i.pinimg.com/736x/25/0b/d1/250bd17a53269fe131c07204c09aeb21.jpg" alt="Smart Farming Visual">
+                            <div class="floating-badge">
+                                <i class="fas fa-leaf"></i>
+                                <span>Eco Certified</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">Agri<span>sha</span></a>
+                <p>Inovasi agribisnis masa depan untuk generasi bumi yang lebih hijau.</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/agrishamic?utm_source=qr&igsh=MWZqc3RleXowcjByNQ=="><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#produk">Produk</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Agronomy License</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Agrisha Inc. All rights reserved. Powered by Smart Farming Tech.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
