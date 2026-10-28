@@ -114,7 +114,7 @@ function handleOrder(event) {
 • Nama Lengkap : ${nama}
 • Email Pengguna : ${email}
 
-🌱 *DETAIL ITEM BIBIT*
+🌱 *DETAIL ITEM*
 • Jenis Produk : ${produk}
 • Kuantitas Pesan : ${jumlah} pack
 • Harga Satuan : ${formatRupiah(hargaPerPack)}
