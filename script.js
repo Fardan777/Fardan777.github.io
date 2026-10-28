@@ -105,7 +105,7 @@ function handleOrder(event) {
     };
 
     // PENTING: Ganti nomor di bawah ini menggunakan nomor WhatsApp Anda (Gunakan kode negara, contoh: 628xxx)
-    const nomorWA = "62881023879528";
+    const nomorWA = "6289613904967";
 
     // Penyusunan teks pesan cetak Invoice tagihan rapi
     const teksPesan = `Halo Agrisha, saya ingin memesan bibit dengan rincian berikut:
